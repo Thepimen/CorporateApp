@@ -3,24 +3,36 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Productos</ion-title>
+    <ion-title>Catálogo Marketplace</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content class="ion-padding">
   <ion-grid>
-    <ion-row style="font-weight: bold; border-bottom: 2px solid #ccc;">
-      <ion-col size="2">ID</ion-col>
-      <ion-col size="4">Nombre</ion-col>
-      <ion-col size="2">Unid.</ion-col>
-      <ion-col size="2">Precio</ion-col>
-      <ion-col size="2">Foto</ion-col>
+    <!-- Encabezado de la tabla -->
+    <ion-row class="header-row">
+      <ion-col size="1"><strong>ID</strong></ion-col>
+      <ion-col size="2"><strong>Foto</strong></ion-col>
+      <ion-col size="3"><strong>Nombre</strong></ion-col>
+      <ion-col size="3"><strong>Vendedor</strong></ion-col>
+      <ion-col size="1.5"><strong>Stock</strong></ion-col>
+      <ion-col size="1.5"><strong>Precio</strong></ion-col>
     </ion-row>
-    <ion-row *ngFor="let p of products" style="align-items: center; border-bottom: 1px solid #eee;">
-      <ion-col size="2">{{ p.id }}</ion-col>
-      <ion-col size="4">{{ p.nombre }}</ion-col>
-      <ion-col size="2">{{ p.unidades }}</ion-col>
-      <ion-col size="2">{{ p.precio }} €</ion-col>
-      <ion-col size="2"><img [src]="p.foto" width="50" style="border-radius: 4px;" /></ion-col>
+
+    <!-- Filas dinámicas -->
+    <ion-row *ngFor="let p of products" class="data-row">
+      <ion-col size="1">{{ p.id }}</ion-col>
+      <ion-col size="2">
+        <img [src]="p.foto" [alt]="p.nombre" class="product-thumb" />
+      </ion-col>
+      <ion-col size="3">
+        <strong>{{ p.nombre }}</strong>
+      </ion-col>
+      <ion-col size="3">
+        <ion-badge color="medium" mode="ios">{{ p.vendedor }}</ion-badge>
+      </ion-col>
+      <ion-col size="1.5">{{ p.unidades }} ud</ion-col>
+      <ion-col size="1.5" class="precio-col">{{ p.precio }} €</ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

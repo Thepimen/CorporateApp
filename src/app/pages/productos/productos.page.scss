@@ -1,0 +1,32 @@
+.header-row {
+    background-color: #f4f5f8;
+    font-weight: 600;
+    border-bottom: 2px solid #dedede;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.data-row {
+    align-items: center;
+    border-bottom: 1px solid #e9ecef;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.product-thumb {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.precio-col {
+    color: #8C0014;
+    font-weight: 700;
+}
+
+ion-badge {
+    font-size: 0.75rem;
+    letter-spacing: 0.2px;
+}
