@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Corporate App</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-segment value="home">
+    <ion-segment-button routerLink="/productos">
+      <ion-label>Productos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button routerLink="/nosotros">
+      <ion-label>Nosotros</ion-label>
+    </ion-segment-button>
+    <ion-segment-button routerLink="/contacto">
+      <ion-label>Contacto</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-card class="ion-margin-top">
+    <ion-card-header>
+      <ion-card-title>Bienvenido</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Aplicación corporativa construida con Ionic, Angular Standalone y Capacitor.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

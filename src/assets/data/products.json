@@ -1,0 +1,5 @@
+[
+  { "id": 1, "nombre": "Portátil Dell XPS 15", "unidades": 12, "precio": 1200, "foto": "https://picsum.photos/id/1/100/100" },
+  { "id": 2, "nombre": "Monitor LG UltraFine 4K", "unidades": 8, "precio": 299, "foto": "https://picsum.photos/id/2/100/100" },
+  { "id": 3, "nombre": "Teclado Mecánico Custom", "unidades": 25, "precio": 149, "foto": "https://picsum.photos/id/3/100/100" }
+]
