@@ -20,19 +20,21 @@
     </ion-row>
 
     <!-- Filas dinámicas -->
-    <ion-row *ngFor="let p of products" class="data-row">
-      <ion-col size="1">{{ p.id }}</ion-col>
-      <ion-col size="2">
-        <img [src]="p.foto" [alt]="p.nombre" class="product-thumb" />
-      </ion-col>
-      <ion-col size="3">
-        <strong>{{ p.nombre }}</strong>
-      </ion-col>
-      <ion-col size="3">
-        <ion-badge color="medium" mode="ios">{{ p.vendedor }}</ion-badge>
-      </ion-col>
-      <ion-col size="1.5">{{ p.unidades }} ud</ion-col>
-      <ion-col size="1.5" class="precio-col">{{ p.precio }} €</ion-col>
-    </ion-row>
+    @for (p of products; track p.id) {
+      <ion-row class="data-row">
+        <ion-col size="1">{{ p.id }}</ion-col>
+        <ion-col size="2">
+          <img [src]="p.foto" [alt]="p.nombre" class="product-thumb" />
+        </ion-col>
+        <ion-col size="3">
+          <strong class="product-name">{{ p.nombre }}</strong>
+        </ion-col>
+        <ion-col size="3">
+          <ion-badge color="medium" mode="ios">{{ p.vendedor }}</ion-badge>
+        </ion-col>
+        <ion-col size="1.5">{{ p.unidades }} ud</ion-col>
+        <ion-col size="1.5" class="precio-col">{{ p.precio }} €</ion-col>
+      </ion-row>
+    }
   </ion-grid>
 </ion-content>

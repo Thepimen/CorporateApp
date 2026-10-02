@@ -1,32 +1,72 @@
+ion-grid {
+  background: #18181b;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  border: 1px solid #27272a;
+  margin-top: 12px;
+}
+
 .header-row {
-    background-color: #f4f5f8;
-    font-weight: 600;
-    border-bottom: 2px solid #dedede;
-    padding: 8px 0;
-    text-align: center;
+  background-color: #27272a !important;
+  color: #f4f4f5 !important;
+  font-weight: 700;
+  border-bottom: 2px solid #3f3f46;
+  padding: 12px 0;
+  text-align: center;
+  align-items: center;
+
+  ion-col {
+    color: #f4f4f5 !important;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
 }
 
 .data-row {
-    align-items: center;
-    border-bottom: 1px solid #e9ecef;
-    padding: 8px 0;
-    text-align: center;
+  align-items: center;
+  border-bottom: 1px solid #27272a;
+  padding: 10px 0;
+  text-align: center;
+  color: #e4e4e7;
+  background-color: #18181b;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #27272a;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .product-thumb {
-    width: 48px;
-    height: 48px;
-    object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #27272a;
+}
+
+.product-name {
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .precio-col {
-    color: #8C0014;
-    font-weight: 700;
+  color: #38bdf8 !important;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 ion-badge {
-    font-size: 0.75rem;
-    letter-spacing: 0.2px;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  padding: 5px 10px;
+  border-radius: 6px;
 }
